@@ -62,6 +62,11 @@ body.no-scroll {
   /* small nudge closer to the logo image */
 }
 
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .logo span {
   color: var(--primary-gold);
   font-weight: 600;
