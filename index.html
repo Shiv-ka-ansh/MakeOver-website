@@ -15,8 +15,16 @@
     <!-- ✅ Navbar Section -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div><a href="#home"></a><img src="img/logo.png" alt="logo" class="site-logo"></a></div>
-            <div class="logo"><a href="#home">Makeover By <span>REET</span></a></div>
+            <div>
+                <a href="#home">
+                    <img src="img/logo.png" alt="logo" class="site-logo">
+                </a>
+            </div>
+            <div class="logo">
+                <a href="#home">
+                    Makeover By <span>REET</span>
+                </a>
+            </div>
             <div class="mobile-menu-btn" id="mobileMenuBtn">
                 <span></span>
                 <span></span>
@@ -25,7 +33,7 @@
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact" class="book-now-btn">Book Now</a></li>
@@ -102,48 +110,59 @@
             <p>Comprehensive makeup services tailored to make you look and feel extraordinary for every occasion</p>
         </div>
         <div class="services-grid">
-            <div class="service-card">
+            <a href="services.html#bridal" class="service-card">
                 <div class="service-number">01</div>
-                <h3>Bridal Makeup</h3>
-                <p>Complete bridal transformation including trial session, wedding day makeup, touch-ups, and hair
-                    styling. Customized to match your wedding theme and personal style.</p>
-                <div class="service-price">Starting from ₹25,000</div>
-            </div>
-            <div class="service-card">
+                <h3>Bridal & Occasion Makeup</h3>
+                <p>From pre-bridal to the big day, our makeup artists create flawless looks tailored to your event — be
+                    it party, engagement, or wedding ceremonies.</p>
+                <div class="service-price">Starting from ₹1,500</div>
+            </a>
+
+            <a href="services.html#probridal" class="service-card">
                 <div class="service-number">02</div>
-                <h3>Pre-Bridal Packages</h3>
-                <p>Get wedding-ready with our comprehensive pre-bridal services including skin prep, consultations, and
-                    multiple trial sessions to perfect your look.</p>
-                <div class="service-price">Starting from ₹15,000</div>
-            </div>
-            <div class="service-card">
+                <h3>Pro Bridal Packages</h3>
+                <p>Comprehensive head-to-toe bridal care including facials, waxing, mani-pedi, spa, body polishing, and
+                    massages — designed for that radiant wedding glow.</p>
+                <div class="service-price">Starting from ₹7,999</div>
+            </a>
+
+            <a href="services.html#semi-permanent" class="service-card">
                 <div class="service-number">03</div>
-                <h3>Engagement Makeup</h3>
-                <p>Elegant and sophisticated makeup for your engagement ceremony. Perfect balance of traditional and
-                    contemporary styles.</p>
-                <div class="service-price">Starting from ₹12,000</div>
-            </div>
-            <div class="service-card">
+                <h3>Semi Permanent Makeup</h3>
+                <p>Enhance your natural beauty with brow tinting, lip blushing, cheek tint, and BB Glow treatments for
+                    long-lasting radiance.</p>
+                <div class="service-price">Starting from ₹1,999</div>
+            </a>
+
+            <a href="services.html#facials" class="service-card">
                 <div class="service-number">04</div>
-                <h3>Party Makeup</h3>
-                <p>Glamorous makeup for parties, events, and celebrations. Long-lasting formulas that keep you
-                    picture-perfect all night.</p>
-                <div class="service-price">Starting from ₹8,000</div>
-            </div>
-            <div class="service-card">
+                <h3>Facials & Skin Care</h3>
+                <p>Choose from hydra, medi, or milkshake facials to rejuvenate your skin and restore natural glow —
+                    perfect for every skin type and occasion.</p>
+                <div class="service-price">Starting from ₹2,000</div>
+            </a>
+
+            <a href="services.html#waxing" class="service-card">
                 <div class="service-number">05</div>
-                <h3>HD & Airbrush Makeup</h3>
-                <p>High-definition makeup perfect for photography and videography. Flawless, natural-looking finish
-                    that's camera-ready.</p>
-                <div class="service-price">Starting from ₹10,000</div>
-            </div>
-            <div class="service-card">
+                <h3>Waxing & Cleanup</h3>
+                <p>Experience smooth, glowing skin with Rica, Chocolate, or Normal waxing options. Refresh your face
+                    with premium cleanups and gentle exfoliation.</p>
+                <div class="service-price">Starting from ₹200</div>
+            </a>
+
+            <a href="services.html#hair" class="service-card">
                 <div class="service-number">06</div>
-                <h3>Hair Styling</h3>
-                <p>Professional hair styling services including updos, curls, braids, and contemporary styles to
-                    complement your makeup look.</p>
-                <div class="service-price">Starting from ₹5,000</div>
-            </div>
+                <h3>Hair Treatments & Colour</h3>
+                <p>Transform your hair with smoothing, keratin, cysteine, and global color services using premium
+                    professional products for healthy shine and style.</p>
+                <div class="service-price">Starting from ₹2,000</div>
+            </a>
+
+
+        </div>
+
+        <div class="view-more-services"> 
+            <a href="services.html" class="btn-more">View More Services</a> 
         </div>
     </section>
 
@@ -210,67 +229,69 @@
 
     <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
-  <div class="section-header">
-    <h2>Client <span>Testimonials</span></h2>
-    <p>Hear what our beautiful clients have to say</p>
-  </div>
+        <div class="section-header">
+            <h2>Client <span>Testimonials</span></h2>
+            <p>Hear what our beautiful clients have to say</p>
+        </div>
 
-  <!-- Swiper Container -->
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <!-- Slide 1 -->
-      <div class="swiper-slide testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">
-          "Best bridal makeup artist! She made me look absolutely stunning on my wedding day."
-        </p>
-        <h4>Reetu Singh</h4>
-        <p>Kannauj</p>
-      </div>
+        <!-- Swiper Container -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Best bridal makeup artist! She made me look absolutely stunning on my wedding day."
+                    </p>
+                    <h4>Reetu Singh</h4>
+                    <p>Kannauj</p>
+                </div>
 
-      <!-- Slide 2 -->
-      <div class="swiper-slide testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">
-          "Amazing experience! The look was exactly what I imagined. Highly recommend!"
-        </p>
-        <h4>Pooja Verma</h4>
-        <p>Kanpur</p>
-      </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Amazing experience! The look was exactly what I imagined. Highly recommend!"
+                    </p>
+                    <h4>Pooja Verma</h4>
+                    <p>Kanpur</p>
+                </div>
 
-      <!-- Slide 3 -->
-      <div class="swiper-slide testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">
-          "Loved the work! Professional and kind service, definitely booking again."
-        </p>
-        <h4>Neha Sharma</h4>
-        <p>Lucknow</p>
-      </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Loved the work! Professional and kind service, definitely booking again."
+                    </p>
+                    <h4>Neha Sharma</h4>
+                    <p>Lucknow</p>
+                </div>
 
-        <!-- Slide 4 -->
-      <div class="swiper-slide testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">
-          "Loved the work! Professional and kind service, definitely booking again."
-        </p>
-        <h4>Neha Sharma</h4>
-        <p>Lucknow</p>
-      </div>
-    </div>
+                <!-- Slide 4 -->
+                <div class="swiper-slide testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Loved the work! Professional and kind service, definitely booking again."
+                    </p>
+                    <h4>Neha Sharma</h4>
+                    <p>Lucknow</p>
+                    <h4>Neha Sharma</h4>
+                    <p>Lucknow</p>
+                </div>
+            </div>
 
-    
-    <!-- Pagination -->
-    <div class="swiper-pagination"></div>
-  </div>
 
-  <!-- Google Review Link -->
-  <div class="google-review-link">
-    <a href="https://www.google.com/maps/search/Makeover+By+Reet+Kannauj" target="_blank">
-      ⭐ View All on Google Reviews
-    </a>
-  </div>
-</section>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Google Review Link -->
+        <div class="google-review-link">
+            <a href="https://www.google.com/maps/search/Makeover+By+Reet+Kannauj" target="_blank">
+                ⭐ View All on Google Reviews
+            </a>
+        </div>
+    </section>
 
 
 
@@ -506,21 +527,21 @@
 
     <script src="js/style.js"></script>
     <!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<script>
-  const swiper = new Swiper(".mySwiper", {
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-</script>
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
 
 
 

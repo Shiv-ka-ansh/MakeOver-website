@@ -392,6 +392,11 @@ body.no-scroll {
   margin: 0 auto;
 }
 
+.services-grid a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .service-card {
   background: white;
   padding: 3rem 2.5rem;
@@ -446,6 +451,30 @@ body.no-scroll {
   color: var(--primary-gold);
   font-weight: 600;
   font-size: 1.1rem;
+}
+
+.view-more-services {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.btn-more {
+  display: inline-block;
+  background: #c9a362;
+  color: #fff;
+  padding: 0.9rem 2.4rem;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-more:hover {
+  background: #a67c33;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(201, 163, 98, 0.4);
 }
 
 /* Portfolio Gallery */
@@ -607,7 +636,8 @@ body.no-scroll {
   padding: 8rem 5%;
   background: white;
 }
-.section-header a{
+
+.section-header a {
   text-decoration: none;
   color: var(--primary-gold);
 }
@@ -800,40 +830,40 @@ body.no-scroll {
 
 /* ✅ Studio Section */
 .studio {
-    padding: 80px 5%;
-    background: #faf7f2;
-    text-align: center;
+  padding: 80px 5%;
+  background: #faf7f2;
+  text-align: center;
 }
 
 .studio-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
 .studio-card {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    transition: 0.3s ease;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
 }
 
 .studio-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .studio-card h3 {
-    color: var(--primary-gold, #c19b76);
-    margin-bottom: 0.5rem;
+  color: var(--primary-gold, #c19b76);
+  margin-bottom: 0.5rem;
 }
 
 .map-container {
-    margin-top: 1.5rem;
-    border-radius: 10px;
-    overflow: hidden;
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 
@@ -918,20 +948,25 @@ footer {
 
 /* Individual brand colors */
 .social-links a[href*="instagram.com"] svg {
-  fill: #E1306C; /* Instagram pink */
+  fill: #E1306C;
+  /* Instagram pink */
 }
 
 .social-links a[href*="facebook.com"] svg {
-  fill: #1877F2; /* Facebook blue */
+  fill: #1877F2;
+  /* Facebook blue */
 }
 
 .social-links a[href*="youtube.com"] svg,
 .social-links a[aria-label="YouTube"] svg {
   fill: #ff0000c6;
-} /* YouTube red */
+}
+
+/* YouTube red */
 
 .social-links a[href*="wa.me"] svg {
-  fill: #25D366; /* WhatsApp green */
+  fill: #25D366;
+  /* WhatsApp green */
 }
 
 /* Optional hover effect — just a light lift */
@@ -1079,32 +1114,33 @@ footer {
     grid-template-columns: 1fr;
   }
 }
- .whatsapp-float {
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 25px;
-      right: 25px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 32px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      z-index: 1000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.3s ease;
-    }
 
-    .whatsapp-float:hover {
-      background-color: #20b358;
-      transform: scale(1.05);
-    }
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
 
-    .whatsapp-float svg {
-      width: 32px;
-      height: 32px;
-      fill: white;
-    }
+.whatsapp-float:hover {
+  background-color: #20b358;
+  transform: scale(1.05);
+}
+
+.whatsapp-float svg {
+  width: 32px;
+  height: 32px;
+  fill: white;
+}
