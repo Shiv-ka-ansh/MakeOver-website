@@ -804,6 +804,46 @@ body.no-scroll {
   box-shadow: 0 10px 30px rgba(201, 163, 98, 0.3);
 }
 
+/* ✅ Studio Section */
+.studio {
+    padding: 80px 5%;
+    background: #faf7f2;
+    text-align: center;
+}
+
+.studio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.studio-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.studio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.studio-card h3 {
+    color: var(--primary-gold, #c19b76);
+    margin-bottom: 0.5rem;
+}
+
+.map-container {
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+
 /* Footer */
 footer {
   background: #1a1a1a;
