@@ -550,6 +550,7 @@ body.no-scroll {
 
 /* Testimonials */
 .testimonials {
+  text-align: center;
   padding: 8rem 5%;
   background: var(--light-cream);
 }
@@ -575,47 +576,39 @@ body.no-scroll {
   font-style: italic;
 }
 
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.author-image {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: var(--primary-gold);
-  overflow: hidden;
-}
-
-.author-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.author-info h4 {
-  font-size: 1.1rem;
-  margin-bottom: 0.3rem;
-}
-
-.author-info p {
-  color: var(--light-text);
-  font-size: 0.9rem;
-}
-
 .stars {
   color: var(--primary-gold);
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
 
+.google-review-link {
+  margin-top: 20px;
+}
+
+.google-review-link a {
+  color: #4285F4;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primary-gold);
+}
+
 /* Instagram Feed */
 .instagram {
   padding: 8rem 5%;
   background: white;
+}
+.section-header a{
+  text-decoration: none;
+  color: var(--primary-gold);
 }
 
 .instagram-grid {
@@ -916,10 +909,36 @@ footer {
   transition: all 0.3s;
 }
 
+/* Icon sizes */
+.social-links a svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* Individual brand colors */
+.social-links a[href*="instagram.com"] svg {
+  fill: #E1306C; /* Instagram pink */
+}
+
+.social-links a[href*="facebook.com"] svg {
+  fill: #1877F2; /* Facebook blue */
+}
+
+.social-links a[href*="youtube.com"] svg,
+.social-links a[aria-label="YouTube"] svg {
+  fill: #ff0000c6;
+} /* YouTube red */
+
+.social-links a[href*="wa.me"] svg {
+  fill: #25D366; /* WhatsApp green */
+}
+
+/* Optional hover effect — just a light lift */
 .social-links a:hover {
-  background: var(--primary-gold);
   transform: translateY(-3px);
 }
+
+
 
 .footer-bottom {
   text-align: center;
