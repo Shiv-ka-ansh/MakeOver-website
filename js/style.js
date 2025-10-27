@@ -15,6 +15,22 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleScroll);
   handleScroll();
 
+  // Navbar hide/show on scroll direction
+  let lastScrollTop = 0;
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop && currentScroll > 100) {
+      // scrolling down — hide navbar
+      navbar.classList.add('hidden');
+    } else {
+      // scrolling up — show navbar
+      navbar.classList.remove('hidden');
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
+
   // Mobile menu toggle
   mobileMenuBtn.addEventListener('click', () => {
     navMenu.classList.toggle('active');
