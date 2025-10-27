@@ -112,12 +112,14 @@
             max-height: 0;
             overflow: hidden;
             padding-left: 1.5rem;
-            transition: max-height 0.4s ease;
+            transition: max-height 0.5s ease, padding 0.3s ease;
             background: var(--light-cream);
+            padding: 0 1.5rem;
         }
 
         .accordion-content.open {
             max-height: 2500px;
+            padding: 1rem 1.5rem;
         }
 
         .accordion-content table {
@@ -154,7 +156,7 @@
             margin-top: 4rem;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 868px) {
             .page-header h1 {
                 font-size: 2.2rem;
             }
@@ -271,7 +273,7 @@
                 <span></span>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="index.html#services" class="active">Services</a></li>
                 <li><a href="index.html#portfolio">Portfolio</a></li>
@@ -298,218 +300,8 @@
 
     <!-- ACCORDION SERVICES -->
     <section class="accordion">
-        <!-- 1. Bridal & Occasion Makeup -->
-        <div class="accordion-item">
-            <div class="accordion-header ">💄 Shaadi Wala Makeup (Bridal & Occasion) <span class="icon">›</span></div>
-            <div class="accordion-content">
-                <h4>Makeup Services</h4>
-                <table>
-                    <tr>
-                        <th>Event</th>
-                        <th>Service Type</th>
-                        <th>Junior (₹)</th>
-                        <th>Senior (₹)</th>
-                        <th>Expert (₹)</th>
-                    </tr>
-                    <tr>
-                        <td>Party</td>
-                        <td>Normal</td>
-                        <td>1500</td>
-                        <td>2000</td>
-                        <td>3500</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Air Brush</td>
-                        <td>2500</td>
-                        <td>3000</td>
-                        <td>4500</td>
-                    </tr>
-                    <tr>
-                        <td>Engagement</td>
-                        <td>Normal</td>
-                        <td>5000</td>
-                        <td>7000</td>
-                        <td>9000</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>HD</td>
-                        <td>6000</td>
-                        <td>8000</td>
-                        <td>11000</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Air Brush</td>
-                        <td>7000</td>
-                        <td>9000</td>
-                        <td>13500</td>
-                    </tr>
-                    <tr>
-                        <td>Haldi</td>
-                        <td>Normal</td>
-                        <td>4500</td>
-                        <td>6500</td>
-                        <td>9000</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Air Brush</td>
-                        <td>5500</td>
-                        <td>7500</td>
-                        <td>10000</td>
-                    </tr>
-                    <tr>
-                        <td>Bridal</td>
-                        <td>Normal</td>
-                        <td>8000</td>
-                        <td>8500</td>
-                        <td>12000</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>HD</td>
-                        <td>9900</td>
-                        <td>12500</td>
-                        <td>15000</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Air Brush</td>
-                        <td>11000</td>
-                        <td>14000</td>
-                        <td>20000</td>
-                    </tr>
-                    <tr>
-                        <td>Reception</td>
-                        <td>Normal</td>
-                        <td>9000</td>
-                        <td>15000</td>
-                        <td>28000</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>HD</td>
-                        <td>4500</td>
-                        <td>6500</td>
-                        <td>9000</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Air Brush</td>
-                        <td>5500</td>
-                        <td>7500</td>
-                        <td>10000</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-
-        <!-- 2. Pro Bridal Packages -->
-        <div class="accordion-item">
-            <div class="accordion-header">👑 Dose of Glow – Head to Toe Packages <span class="icon">›</span></div>
-            <div class="accordion-content">
-                <table>
-                    <tr>
-                        <th>Package</th>
-                        <th>Price (₹)</th>
-                        <th>Key Inclusions</th>
-                    </tr>
-                    <tr>
-                        <td>Package 1</td>
-                        <td>7999/-</td>
-                        <td>3 Facials (2 Fruit, 1 Gold), Full Body Wax (Normal), Manicure & Pedicure (Basic), Hair Cut
-                            (Basic), Hair Spa, Body Polishing (4 Step).</td>
-                    </tr>
-                    <tr>
-                        <td>Package 2</td>
-                        <td>9999/-</td>
-                        <td>3 Facials (2 Gold, 1 Diamond), Full Body Wax (Chocolate), Manicure & Pedicure (Basic), Hair
-                            Cut (Basic), Hair Spa, Body Polishing (4 Step), Body Massage (45 Min).</td>
-                    </tr>
-                    <tr>
-                        <td>Package 3</td>
-                        <td>11999/-</td>
-                        <td>3 Facials (2 O3+ Whitening, 1 O3+ Bridal Glow), Full Body Wax (Chocolate), Manicure &
-                            Pedicure, Hair Cut (Layer), Hair Spa, Body Polishing (5 Step), Body Massage (45 Min).</td>
-                    </tr>
-                    <tr>
-                        <td>Package 4</td>
-                        <td>13999/-</td>
-                        <td>3 Facials (Premium Facial According to Skin), Full Body Wax (Rica), Manicure & Pedicure,
-                            Hair Cut (Layer), Hair Spa, Body Polishing (5 Step), Body Massage (45 Min), Mehandi.</td>
-                    </tr>
-                    <tr>
-                        <td>Package 5 (MBR Special)</td>
-                        <td>14999/-</td>
-                        <td>3 Facials (Premium Facial According to Skin), Full Body Wax including Bikini and Butt Area
-                            (Rica), Manicure & Pedicure, Hair Cut (Layer), Hair Spa, Body Polishing (Instant Glow), Body
-                            Massage (45 Min), Mehandi, Nail Extension.</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-
-        <!-- 3. Semi Permanent Makeup -->
-        <div class="accordion-item">
-            <div class="accordion-header">💋 Semi Permanent Makeup <span class="icon">›</span></div>
-            <div class="accordion-content">
-                <table>
-                    <tr>
-                        <th>Service</th>
-                        <th>Price (₹)</th>
-                    </tr>
-                    <tr>
-                        <td>Brow Tint</td>
-                        <td>1999</td>
-                    </tr>
-                    <tr>
-                        <td>Lash Tint</td>
-                        <td>1999</td>
-                    </tr>
-                    <tr>
-                        <td>BB Glow</td>
-                        <td>4999</td>
-                    </tr>
-                    <tr>
-                        <td>Combination Eyebrows</td>
-                        <td>3500</td>
-                    </tr>
-                    <tr>
-                        <td>Cheek Tint</td>
-                        <td>3500</td>
-                    </tr>
-                    <tr>
-                        <td>Lip Tint</td>
-                        <td>3500</td>
-                    </tr>
-                    <tr>
-                        <td>Nana Lip</td>
-                        <td>5000</td>
-                    </tr>
-                    <tr>
-                        <td>Lip Style</td>
-                        <td>5500</td>
-                    </tr>
-                    <tr>
-                        <td>Micro Bright Glow</td>
-                        <td>5000</td>
-                    </tr>
-                    <tr>
-                        <td>Foundation Eyebrows</td>
-                        <td>5500</td>
-                    </tr>
-                    <tr>
-                        <td>Dark Lip Neutralization</td>
-                        <td>5000</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-
-        <!-- 4. Facials -->
-        <div class="accordion-item">
+        <!-- 1. Facials -->
+        <div class="accordion-item" id="facial">
             <div class="accordion-header">💆‍♀️ Facials <span class="icon">›</span></div>
             <div class="accordion-content">
                 <h4>1. Machine Facials</h4>
@@ -652,8 +444,8 @@
             </div>
         </div>
 
-        <!-- 5. Cleanup -->
-        <div class="accordion-item">
+        <!-- 2. Cleanup -->
+        <div class="accordion-item" id="cleanup">
             <div class="accordion-header">🫧 Cleanup <span class="icon">›</span></div>
             <div class="accordion-content">
                 <table>
@@ -769,8 +561,8 @@
             </div>
         </div>
 
-        <!-- 6. Waxing -->
-        <div class="accordion-item">
+        <!-- 3. Waxing -->
+        <div class="accordion-item" id="waxing">
             <div class="accordion-header">🧴 Waxing <span class="icon">›</span></div>
             <div class="accordion-content">
                 <h4>1. Brazilian Wax</h4>
@@ -914,11 +706,200 @@
             </div>
         </div>
 
-        <!-- 7. Hair Services -->
-        <div class="accordion-item">
-            <div class="accordion-header">💇‍♀️ Hair Services <span class="icon">›</span></div>
+        <!-- 4. Manicure & Pedicure -->
+        <div class="accordion-item" id="manicure-pedicure">
+            <div class="accordion-header">💅 Manicure & Pedicure <span class="icon">›</span></div>
             <div class="accordion-content">
 
+                <h4>1. Manicure</h4>
+                <table>
+                    <tr>
+                        <th>Service</th>
+                        <th>Price (₹)</th>
+                    </tr>
+                    <tr>
+                        <td>Regular</td>
+                        <td>400</td>
+                    </tr>
+                    <tr>
+                        <td>Aroma</td>
+                        <td>600</td>
+                    </tr>
+                    <tr>
+                        <td>Lotus</td>
+                        <td>700</td>
+                    </tr>
+                    <tr>
+                        <td>O3+</td>
+                        <td>900</td>
+                    </tr>
+                    <tr>
+                        <td>Raaga</td>
+                        <td>1100</td>
+                    </tr>
+                    <tr>
+                        <td>Crystal</td>
+                        <td>1200</td>
+                    </tr>
+                    <tr>
+                        <td>Alga</td>
+                        <td>1400</td>
+                    </tr>
+                    <tr>
+                        <td>Ice Cream</td>
+                        <td>1500</td>
+                    </tr>
+                </table>
+
+                <h4>2. Pedicure</h4>
+                <table>
+                    <tr>
+                        <th>Service</th>
+                        <th>Price (₹)</th>
+                    </tr>
+                    <tr>
+                        <td>Regular</td>
+                        <td>400</td>
+                    </tr>
+                    <tr>
+                        <td>Aroma</td>
+                        <td>600</td>
+                    </tr>
+                    <tr>
+                        <td>Lotus</td>
+                        <td>700</td>
+                    </tr>
+                    <tr>
+                        <td>O3+</td>
+                        <td>900</td>
+                    </tr>
+                    <tr>
+                        <td>Raaga</td>
+                        <td>1100</td>
+                    </tr>
+                    <tr>
+                        <td>Crystal</td>
+                        <td>1200</td>
+                    </tr>
+                    <tr>
+                        <td>Alga</td>
+                        <td>1400</td>
+                    </tr>
+                    <tr>
+                        <td>Ice Cream</td>
+                        <td>1500</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- 5. Beauty Services -->
+        <div class="accordion-item" id="beauty-services">
+            <div class="accordion-header">💆‍♀️ Beauty Services <span class="icon">›</span></div>
+            <div class="accordion-content">
+                <h4>1. Threading</h4>
+                <table>
+                    <tr>
+                        <th>Service</th>
+                        <th>Price (₹)</th>
+                    </tr>
+                    <tr>
+                        <td>Full Face</td>
+                        <td>150</td>
+                    </tr>
+                    <tr>
+                        <td>Side Looks</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>Forehead</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>Chin</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>Upper Lips</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>Eye Brows</td>
+                        <td>30</td>
+                    </tr>
+                </table>
+
+                <h4>2. Bleach, D-Tan & Polishing (Instant Result)</h4>
+                <table>
+                    <tr>
+                        <th>Services</th>
+                        <th>Bleach (₹)</th>
+                        <th>D-Tan (₹)</th>
+                        <th>Polishing (Instant Result) (₹)</th>
+                    </tr>
+                    <tr>
+                        <td>Face</td>
+                        <td>200</td>
+                        <td>250</td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <td>Neck</td>
+                        <td>100</td>
+                        <td>150</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>Half Arms</td>
+                        <td>300</td>
+                        <td>400</td>
+                        <td>600</td>
+                    </tr>
+                    <tr>
+                        <td>Full Arms</td>
+                        <td>500</td>
+                        <td>700</td>
+                        <td>1000</td>
+                    </tr>
+                    <tr>
+                        <td>Half Legs</td>
+                        <td>600</td>
+                        <td>500</td>
+                        <td>700</td>
+                    </tr>
+                    <tr>
+                        <td>Full Legs</td>
+                        <td>900</td>
+                        <td>1100</td>
+                        <td>1500</td>
+                    </tr>
+                    <tr>
+                        <td>Feet</td>
+                        <td>150</td>
+                        <td>250</td>
+                        <td>350</td>
+                    </tr>
+                    <tr>
+                        <td>Under Arms</td>
+                        <td>100</td>
+                        <td>200</td>
+                        <td>300</td>
+                    </tr>
+                    <tr>
+                        <td>Full Body</td>
+                        <td>2000</td>
+                        <td>2500</td>
+                        <td>5000</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+        <!-- 6. Hair Services -->
+        <div class="accordion-item" id="hair-services">
+            <div class="accordion-header">💇‍♀️ Hair Services <span class="icon">›</span></div>
+            <div class="accordion-content">
                 <h4>1. Hair Treatments</h4>
                 <table>
                     <tr>
@@ -1061,199 +1042,218 @@
             </div>
         </div>
 
-        <!-- 8. Manicure & Pedicure -->
-        <div class="accordion-item">
-            <div class="accordion-header">💅 Manicure & Pedicure <span class="icon">›</span></div>
+        <!-- 7. Bridal & Occasion Makeup -->
+        <div class="accordion-item" id="bridal">
+            <div class="accordion-header ">💄 Shaadi Wala Makeup (Bridal & Occasion) <span class="icon">›</span></div>
             <div class="accordion-content">
-
-                <h4>1. Manicure</h4>
+                <h4>Makeup Services</h4>
                 <table>
                     <tr>
-                        <th>Service</th>
-                        <th>Price (₹)</th>
+                        <th>Event</th>
+                        <th>Service Type</th>
+                        <th>Junior (₹)</th>
+                        <th>Senior (₹)</th>
+                        <th>Expert (₹)</th>
                     </tr>
                     <tr>
-                        <td>Regular</td>
-                        <td>400</td>
-                    </tr>
-                    <tr>
-                        <td>Aroma</td>
-                        <td>600</td>
-                    </tr>
-                    <tr>
-                        <td>Lotus</td>
-                        <td>700</td>
-                    </tr>
-                    <tr>
-                        <td>O3+</td>
-                        <td>900</td>
-                    </tr>
-                    <tr>
-                        <td>Raaga</td>
-                        <td>1100</td>
-                    </tr>
-                    <tr>
-                        <td>Crystal</td>
-                        <td>1200</td>
-                    </tr>
-                    <tr>
-                        <td>Alga</td>
-                        <td>1400</td>
-                    </tr>
-                    <tr>
-                        <td>Ice Cream</td>
+                        <td>Party</td>
+                        <td>Normal</td>
                         <td>1500</td>
-                    </tr>
-                </table>
-
-                <h4>2. Pedicure</h4>
-                <table>
-                    <tr>
-                        <th>Service</th>
-                        <th>Price (₹)</th>
+                        <td>2000</td>
+                        <td>3500</td>
                     </tr>
                     <tr>
-                        <td>Regular</td>
-                        <td>400</td>
+                        <td></td>
+                        <td>Air Brush</td>
+                        <td>2500</td>
+                        <td>3000</td>
+                        <td>4500</td>
                     </tr>
                     <tr>
-                        <td>Aroma</td>
-                        <td>600</td>
+                        <td>Engagement</td>
+                        <td>Normal</td>
+                        <td>5000</td>
+                        <td>7000</td>
+                        <td>9000</td>
                     </tr>
                     <tr>
-                        <td>Lotus</td>
-                        <td>700</td>
+                        <td></td>
+                        <td>HD</td>
+                        <td>6000</td>
+                        <td>8000</td>
+                        <td>11000</td>
                     </tr>
                     <tr>
-                        <td>O3+</td>
-                        <td>900</td>
+                        <td></td>
+                        <td>Air Brush</td>
+                        <td>7000</td>
+                        <td>9000</td>
+                        <td>13500</td>
                     </tr>
                     <tr>
-                        <td>Raaga</td>
-                        <td>1100</td>
+                        <td>Haldi</td>
+                        <td>Normal</td>
+                        <td>4500</td>
+                        <td>6500</td>
+                        <td>9000</td>
                     </tr>
                     <tr>
-                        <td>Crystal</td>
-                        <td>1200</td>
+                        <td></td>
+                        <td>Air Brush</td>
+                        <td>5500</td>
+                        <td>7500</td>
+                        <td>10000</td>
                     </tr>
                     <tr>
-                        <td>Alga</td>
-                        <td>1400</td>
+                        <td>Bridal</td>
+                        <td>Normal</td>
+                        <td>8000</td>
+                        <td>8500</td>
+                        <td>12000</td>
                     </tr>
                     <tr>
-                        <td>Ice Cream</td>
-                        <td>1500</td>
+                        <td></td>
+                        <td>HD</td>
+                        <td>9900</td>
+                        <td>12500</td>
+                        <td>15000</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Air Brush</td>
+                        <td>11000</td>
+                        <td>14000</td>
+                        <td>20000</td>
+                    </tr>
+                    <tr>
+                        <td>Reception</td>
+                        <td>Normal</td>
+                        <td>9000</td>
+                        <td>15000</td>
+                        <td>28000</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>HD</td>
+                        <td>4500</td>
+                        <td>6500</td>
+                        <td>9000</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Air Brush</td>
+                        <td>5500</td>
+                        <td>7500</td>
+                        <td>10000</td>
                     </tr>
                 </table>
             </div>
         </div>
 
-        <!-- 9. Beauty Services -->
-        <div class="accordion-item">
-            <div class="accordion-header">💆‍♀️ Beauty Services <span class="icon">›</span></div>
+        <!-- 8. Pro Bridal Packages -->
+        <div class="accordion-item" id="pro-bridal">
+            <div class="accordion-header">👑 Pro Bridal Packages <span class="icon">›</span></div>
             <div class="accordion-content">
+                <table>
+                    <tr>
+                        <th>Package</th>
+                        <th>Price (₹)</th>
+                        <th>Key Inclusions</th>
+                    </tr>
+                    <tr>
+                        <td>Package 1</td>
+                        <td>7999/-</td>
+                        <td>3 Facials (2 Fruit, 1 Gold), Full Body Wax (Normal), Manicure & Pedicure (Basic), Hair Cut
+                            (Basic), Hair Spa, Body Polishing (4 Step).</td>
+                    </tr>
+                    <tr>
+                        <td>Package 2</td>
+                        <td>9999/-</td>
+                        <td>3 Facials (2 Gold, 1 Diamond), Full Body Wax (Chocolate), Manicure & Pedicure (Basic), Hair
+                            Cut (Basic), Hair Spa, Body Polishing (4 Step), Body Massage (45 Min).</td>
+                    </tr>
+                    <tr>
+                        <td>Package 3</td>
+                        <td>11999/-</td>
+                        <td>3 Facials (2 O3+ Whitening, 1 O3+ Bridal Glow), Full Body Wax (Chocolate), Manicure &
+                            Pedicure, Hair Cut (Layer), Hair Spa, Body Polishing (5 Step), Body Massage (45 Min).</td>
+                    </tr>
+                    <tr>
+                        <td>Package 4</td>
+                        <td>13999/-</td>
+                        <td>3 Facials (Premium Facial According to Skin), Full Body Wax (Rica), Manicure & Pedicure,
+                            Hair Cut (Layer), Hair Spa, Body Polishing (5 Step), Body Massage (45 Min), Mehandi.</td>
+                    </tr>
+                    <tr>
+                        <td>Package 5 (MBR Special)</td>
+                        <td>14999/-</td>
+                        <td>3 Facials (Premium Facial According to Skin), Full Body Wax including Bikini and Butt Area
+                            (Rica), Manicure & Pedicure, Hair Cut (Layer), Hair Spa, Body Polishing (Instant Glow), Body
+                            Massage (45 Min), Mehandi, Nail Extension.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
 
-                <h4>1. Threading</h4>
+        <!-- 9. Semi Permanent Makeup -->
+        <div class="accordion-item" id="semi-permanent">
+            <div class="accordion-header">💋 Semi Permanent Makeup <span class="icon">›</span></div>
+            <div class="accordion-content">
                 <table>
                     <tr>
                         <th>Service</th>
                         <th>Price (₹)</th>
                     </tr>
                     <tr>
-                        <td>Full Face</td>
-                        <td>150</td>
+                        <td>Brow Tint</td>
+                        <td>1999</td>
                     </tr>
                     <tr>
-                        <td>Side Looks</td>
-                        <td>50</td>
+                        <td>Lash Tint</td>
+                        <td>1999</td>
                     </tr>
                     <tr>
-                        <td>Forehead</td>
-                        <td>20</td>
+                        <td>BB Glow</td>
+                        <td>4999</td>
                     </tr>
                     <tr>
-                        <td>Chin</td>
-                        <td>30</td>
+                        <td>Combination Eyebrows</td>
+                        <td>3500</td>
                     </tr>
                     <tr>
-                        <td>Upper Lips</td>
-                        <td>30</td>
+                        <td>Cheek Tint</td>
+                        <td>3500</td>
                     </tr>
                     <tr>
-                        <td>Eye Brows</td>
-                        <td>30</td>
-                    </tr>
-                </table>
-
-                <h4>2. Bleach, D-Tan & Polishing (Instant Result)</h4>
-                <table>
-                    <tr>
-                        <th>Services</th>
-                        <th>Bleach (₹)</th>
-                        <th>D-Tan (₹)</th>
-                        <th>Polishing (Instant Result) (₹)</th>
+                        <td>Lip Tint</td>
+                        <td>3500</td>
                     </tr>
                     <tr>
-                        <td>Face</td>
-                        <td>200</td>
-                        <td>250</td>
-                        <td>500</td>
+                        <td>Nana Lip</td>
+                        <td>5000</td>
                     </tr>
                     <tr>
-                        <td>Neck</td>
-                        <td>100</td>
-                        <td>150</td>
-                        <td>200</td>
+                        <td>Lip Style</td>
+                        <td>5500</td>
                     </tr>
                     <tr>
-                        <td>Half Arms</td>
-                        <td>300</td>
-                        <td>400</td>
-                        <td>600</td>
+                        <td>Micro Bright Glow</td>
+                        <td>5000</td>
                     </tr>
                     <tr>
-                        <td>Full Arms</td>
-                        <td>500</td>
-                        <td>700</td>
-                        <td>1000</td>
+                        <td>Foundation Eyebrows</td>
+                        <td>5500</td>
                     </tr>
                     <tr>
-                        <td>Half Legs</td>
-                        <td>600</td>
-                        <td>500</td>
-                        <td>700</td>
-                    </tr>
-                    <tr>
-                        <td>Full Legs</td>
-                        <td>900</td>
-                        <td>1100</td>
-                        <td>1500</td>
-                    </tr>
-                    <tr>
-                        <td>Feet</td>
-                        <td>150</td>
-                        <td>250</td>
-                        <td>350</td>
-                    </tr>
-                    <tr>
-                        <td>Under Arms</td>
-                        <td>100</td>
-                        <td>200</td>
-                        <td>300</td>
-                    </tr>
-                    <tr>
-                        <td>Full Body</td>
-                        <td>2000</td>
-                        <td>2500</td>
+                        <td>Dark Lip Neutralization</td>
                         <td>5000</td>
                     </tr>
                 </table>
-
             </div>
         </div>
 
         <!-- 10. Extension Services -->
-        <div class="accordion-item">
+        <div class="accordion-item" id="extension-services">
             <div class="accordion-header">💅 Extension Services <span class="icon">›</span></div>
             <div class="accordion-content">
 
@@ -1383,6 +1383,7 @@
                 target="_blank"> Book Now </a>
         </div>
     </section>
+
     <!-- FOOTER -->
     <footer>
         <div class="footer-content">
@@ -1429,11 +1430,16 @@
             <div class="footer-links">
                 <h4>Services</h4>
                 <ul>
-                    <li><a href="#">Bridal Makeup</a></li>
-                    <li><a href="#services">Party Makeup</a></li>
-                    <li><a href="#services">HD Makeup</a></li>
-                    <li><a href="#services">Hair Styling</a></li>
-                    <li><a href="#services">Pre-Bridal</a></li>
+                    <li><a href="services.html#facial">Facials & Skin Care</a></li>
+                    <li><a href="services.html#cleanup">Clean-Up Treatments</a></li>
+                    <li><a href="services.html#waxing">Waxing & Threading</a></li>
+                    <li><a href="services.html#manicure-pedicure">Manicure & Pedicure</a></li>
+                    <li><a href="services.html#beauty-services">Beauty Services</a></li>
+                    <li><a href="services.html#hair-services">Hair Services</a></li>
+                    <li><a href="services.html#bridal">Bridal & Occasion Makeup</a></li>
+                    <li><a href="services.html#pro-bridal">Pro Bridal Packages</a></li>
+                    <li><a href="services.html#semi-permanent">Semi-Permanent Makeup</a></li>
+                    <li><a href="services.html#extension-service">Extension Services</a></li>
                 </ul>
             </div>
             <div class="footer-links">
@@ -1456,20 +1462,8 @@
         </div>
     </footer>
 
-    <!-- <script src="js/script.js">document.querySelectorAll('.accordion-header').forEach(header => {
-            header.addEventListener('click', () => {
-                const open = header.classList.contains('active');
-                document.querySelectorAll('.accordion-header').forEach(h => {
-                    h.classList.remove('active');
-                    h.nextElementSibling.classList.remove('open');
-                });
-                if (!open) {
-                    header.classList.add('active');
-                    header.nextElementSibling.classList.add('open');
-                }
-            });
-        });</script> -->
     <script src="js/style.js"></script>
+    
 </body>
 
 </html>

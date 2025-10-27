@@ -108,17 +108,48 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Accordion functionality
-document.querySelectorAll('.accordion-header').forEach(header => {
-  header.addEventListener('click', () => {
-    const open = header.classList.contains('active');
-    document.querySelectorAll('.accordion-header').forEach(h => {
-      h.classList.remove('active');
-      h.nextElementSibling.classList.remove('open');
+// ===== Accordion Functionality with Auto-Unfold =====
+document.addEventListener("DOMContentLoaded", () => {
+  const headers = document.querySelectorAll(".accordion-header");
+
+  headers.forEach(header => {
+    header.addEventListener("click", () => {
+      const item = header.parentElement;
+      const content = item.querySelector(".accordion-content");
+      const isOpen = content.classList.contains("open");
+
+      // Close all
+      document.querySelectorAll(".accordion-content").forEach(c => {
+        c.classList.remove("open");
+        c.style.maxHeight = null;
+      });
+      document.querySelectorAll(".accordion-header").forEach(h => h.classList.remove("active"));
+
+      // Open clicked
+      if (!isOpen) {
+        content.classList.add("open");
+        header.classList.add("active");
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
     });
-    if (!open) {
-      header.classList.add('active');
-      header.nextElementSibling.classList.add('open');
-    }
   });
+
+  // Auto-open if coming from index.html#bridal
+  const hash = window.location.hash;
+  if (hash) {
+    const target = document.querySelector(hash);
+    if (target && target.classList.contains("accordion-item")) {
+      const header = target.querySelector(".accordion-header");
+      const content = target.querySelector(".accordion-content");
+
+      header.classList.add("active");
+      content.classList.add("open");
+      content.style.maxHeight = content.scrollHeight + "px";
+
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 400);
+    }
+  }
 });
+
