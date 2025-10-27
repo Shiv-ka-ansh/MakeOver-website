@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterBtns = document.querySelectorAll('.filter-btn');
   const portfolioItems = document.querySelectorAll('.portfolio-item');
   const slides = document.querySelectorAll('.carousel-slide');
-  
 
   // Navbar scroll effect
   const handleScroll = () => {
@@ -107,4 +106,19 @@ document.addEventListener('DOMContentLoaded', () => {
   } catch (error) {
     console.error('Error initializing Swiper:', error);
   }
+});
+
+// Accordion functionality
+document.querySelectorAll('.accordion-header').forEach(header => {
+  header.addEventListener('click', () => {
+    const open = header.classList.contains('active');
+    document.querySelectorAll('.accordion-header').forEach(h => {
+      h.classList.remove('active');
+      h.nextElementSibling.classList.remove('open');
+    });
+    if (!open) {
+      header.classList.add('active');
+      header.nextElementSibling.classList.add('open');
+    }
+  });
 });

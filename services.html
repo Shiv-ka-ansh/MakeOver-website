@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -189,21 +190,86 @@
             transform: translateY(-3px);
             box-shadow: 0 8px 24px rgba(201, 163, 98, 0.4);
         }
+
+        /* ====== Mobile Responsive Accordion & Tables ====== */
+        @media (max-width: 868px) {
+            .service-accordion {
+                padding: 0 0.5rem;
+            }
+
+            .accordion-header {
+                font-size: 1rem;
+                padding: 1rem;
+            }
+
+            .accordion-content {
+                overflow-x: auto;
+                /* 👈 scroll on small screens */
+            }
+
+            .accordion-content table {
+                width: 700px;
+                /* 👈 fixed width for horizontal scroll */
+                border-collapse: collapse;
+                margin-bottom: 1rem;
+            }
+
+            .accordion-content th,
+            .accordion-content td {
+                white-space: nowrap;
+                /* 👈 prevents wrapping */
+                padding: 0.6rem 0.8rem;
+                font-size: 0.85rem;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .page-header p {
+                font-size: 0.95rem;
+            }
+
+            .book-now {
+                margin: 2rem 0 4rem;
+            }
+
+            .book-now a {
+                padding: 0.8rem 1.8rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        .accordion-content {
+            transition: max-height 0.5s ease, padding 0.3s ease;
+        }
+
+        .accordion-content.open {
+            padding: 1rem 1.5rem;
+        }
     </style>
 </head>
 
 <body>
 
     <!-- NAVBAR (use your same header) -->
-
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="index.html"><img src="img/logo.png" class="site-logo" alt="Makeover by Reet"></a>
+            <div>
+                <a href="index.html">
+                    <img src="img/logo.png" alt="logo" class="site-logo">
+                </a>
+            </div>
             <div class="logo">
                 <a href="index.html">
                     Makeover By <span>REET</span>
                 </a>
-            </div>            
+            </div>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul class="nav-menu">
                 <li><a href="index.html#home">Home</a></li>
                 <li><a href="index.html#about">About</a></li>
@@ -231,12 +297,12 @@
     </a>
 
     <!-- ACCORDION SERVICES -->
-    <section class="accordion">  
+    <section class="accordion">
         <!-- 1. Bridal & Occasion Makeup -->
         <div class="accordion-item">
-            <div class="accordion-header">💄 Shaadi Wala Makeup (Bridal & Occasion) <span class="icon">›</span></div>
+            <div class="accordion-header ">💄 Shaadi Wala Makeup (Bridal & Occasion) <span class="icon">›</span></div>
             <div class="accordion-content">
-               <h4>Makeup Services</h4>
+                <h4>Makeup Services</h4>
                 <table>
                     <tr>
                         <th>Event</th>
@@ -353,27 +419,33 @@
                     <tr>
                         <td>Package 1</td>
                         <td>7999/-</td>
-                        <td>3 Facials (2 Fruit, 1 Gold), Full Body Wax (Normal), Manicure & Pedicure (Basic), Hair Cut (Basic), Hair Spa, Body Polishing (4 Step).</td>
+                        <td>3 Facials (2 Fruit, 1 Gold), Full Body Wax (Normal), Manicure & Pedicure (Basic), Hair Cut
+                            (Basic), Hair Spa, Body Polishing (4 Step).</td>
                     </tr>
                     <tr>
                         <td>Package 2</td>
                         <td>9999/-</td>
-                        <td>3 Facials (2 Gold, 1 Diamond), Full Body Wax (Chocolate), Manicure & Pedicure (Basic), Hair Cut (Basic), Hair Spa, Body Polishing (4 Step), Body Massage (45 Min).</td>
+                        <td>3 Facials (2 Gold, 1 Diamond), Full Body Wax (Chocolate), Manicure & Pedicure (Basic), Hair
+                            Cut (Basic), Hair Spa, Body Polishing (4 Step), Body Massage (45 Min).</td>
                     </tr>
                     <tr>
                         <td>Package 3</td>
                         <td>11999/-</td>
-                        <td>3 Facials (2 O3+ Whitening, 1 O3+ Bridal Glow), Full Body Wax (Chocolate), Manicure & Pedicure, Hair Cut (Layer), Hair Spa, Body Polishing (5 Step), Body Massage (45 Min).</td>
+                        <td>3 Facials (2 O3+ Whitening, 1 O3+ Bridal Glow), Full Body Wax (Chocolate), Manicure &
+                            Pedicure, Hair Cut (Layer), Hair Spa, Body Polishing (5 Step), Body Massage (45 Min).</td>
                     </tr>
                     <tr>
                         <td>Package 4</td>
                         <td>13999/-</td>
-                        <td>3 Facials (Premium Facial According to Skin), Full Body Wax (Rica), Manicure & Pedicure, Hair Cut (Layer), Hair Spa, Body Polishing (5 Step), Body Massage (45 Min), Mehandi.</td>
+                        <td>3 Facials (Premium Facial According to Skin), Full Body Wax (Rica), Manicure & Pedicure,
+                            Hair Cut (Layer), Hair Spa, Body Polishing (5 Step), Body Massage (45 Min), Mehandi.</td>
                     </tr>
                     <tr>
                         <td>Package 5 (MBR Special)</td>
                         <td>14999/-</td>
-                        <td>3 Facials (Premium Facial According to Skin), Full Body Wax including Bikini and Butt Area (Rica), Manicure & Pedicure, Hair Cut (Layer), Hair Spa, Body Polishing (Instant Glow), Body Massage (45 Min), Mehandi, Nail Extension.</td>
+                        <td>3 Facials (Premium Facial According to Skin), Full Body Wax including Bikini and Butt Area
+                            (Rica), Manicure & Pedicure, Hair Cut (Layer), Hair Spa, Body Polishing (Instant Glow), Body
+                            Massage (45 Min), Mehandi, Nail Extension.</td>
                     </tr>
                 </table>
             </div>
@@ -925,67 +997,67 @@
                         <td>Ombre</td>
                         <td>9000</td>
                     </tr>
-                   
+
                 </table>
                 <table>
-                <h4>3. Hair Spa</h4>
-                <tr>
-                    <th>Service</th>
-                    <th>Price (₹)</th>
-                </tr>
-                <tr>
-                    <td>Matrix Smooth and Straight</td>
-                    <td>750</td>
-                </tr>
-                <tr>
-                    <td>L'oreal Argan Oil</td>
-                    <td>850</td>
-                </tr>
-                <tr>
-                    <td>Ker Looks (Nourishing)</td>
-                    <td>900</td>
-                </tr>
-                <tr>
-                    <td>Ker Looks (Moroccan Argan Oil)</td>
-                    <td>1000</td>
-                </tr>
-                <tr>
-                    <td>Ker Looks (Keratin + Smoothening)</td>
-                    <td>1200</td>
-                </tr>
-                <tr>
-                    <td>Matrix</td>
-                    <td>1300</td>
-                </tr>
-                <tr>
-                    <td>L'oreal</td>
-                    <td>1400</td>
-                </tr>
-                <tr>
-                    <td>Schwarzkopf</td>
-                    <td>1500</td>
-                </tr>
-                <tr>
-                    <td>Wella (Nutri-Enrich)</td>
-                    <td>1600</td>
-                </tr>
-                <tr>
-                    <td>Wella (Keratin Restore)</td>
-                    <td>1700</td>
-                </tr>
-                <tr>
-                    <td>L'oreal Anti Hair Fall</td>
-                    <td>2000</td>
-                </tr>
-                <tr>
-                    <td>L'oreal Anti Dandruff</td>
-                    <td>2200</td>
-                </tr>
-                <tr>
-                    <td>L'oreal (Anti Dandruff + Hair Fall)</td>
-                    <td>3500</td>
-                </tr>
-            </table>
+                    <h4>3. Hair Spa</h4>
+                    <tr>
+                        <th>Service</th>
+                        <th>Price (₹)</th>
+                    </tr>
+                    <tr>
+                        <td>Matrix Smooth and Straight</td>
+                        <td>750</td>
+                    </tr>
+                    <tr>
+                        <td>L'oreal Argan Oil</td>
+                        <td>850</td>
+                    </tr>
+                    <tr>
+                        <td>Ker Looks (Nourishing)</td>
+                        <td>900</td>
+                    </tr>
+                    <tr>
+                        <td>Ker Looks (Moroccan Argan Oil)</td>
+                        <td>1000</td>
+                    </tr>
+                    <tr>
+                        <td>Ker Looks (Keratin + Smoothening)</td>
+                        <td>1200</td>
+                    </tr>
+                    <tr>
+                        <td>Matrix</td>
+                        <td>1300</td>
+                    </tr>
+                    <tr>
+                        <td>L'oreal</td>
+                        <td>1400</td>
+                    </tr>
+                    <tr>
+                        <td>Schwarzkopf</td>
+                        <td>1500</td>
+                    </tr>
+                    <tr>
+                        <td>Wella (Nutri-Enrich)</td>
+                        <td>1600</td>
+                    </tr>
+                    <tr>
+                        <td>Wella (Keratin Restore)</td>
+                        <td>1700</td>
+                    </tr>
+                    <tr>
+                        <td>L'oreal Anti Hair Fall</td>
+                        <td>2000</td>
+                    </tr>
+                    <tr>
+                        <td>L'oreal Anti Dandruff</td>
+                        <td>2200</td>
+                    </tr>
+                    <tr>
+                        <td>L'oreal (Anti Dandruff + Hair Fall)</td>
+                        <td>3500</td>
+                    </tr>
+                </table>
             </div>
         </div>
 
@@ -993,7 +1065,7 @@
         <div class="accordion-item">
             <div class="accordion-header">💅 Manicure & Pedicure <span class="icon">›</span></div>
             <div class="accordion-content">
-                
+
                 <h4>1. Manicure</h4>
                 <table>
                     <tr>
@@ -1072,7 +1144,7 @@
                         <td>Ice Cream</td>
                         <td>1500</td>
                     </tr>
-                    </table>
+                </table>
             </div>
         </div>
 
@@ -1347,17 +1419,17 @@
             <div class="footer-links">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services" class="active">Services</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
                 </ul>
             </div>
             <div class="footer-links">
                 <h4>Services</h4>
                 <ul>
-                    <li><a href="#services">Bridal Makeup</a></li>
+                    <li><a href="#">Bridal Makeup</a></li>
                     <li><a href="#services">Party Makeup</a></li>
                     <li><a href="#services">HD Makeup</a></li>
                     <li><a href="#services">Hair Styling</a></li>
@@ -1383,10 +1455,8 @@
             <p>&copy; 2025 Makeup Studio. All Rights Reserved. | Designed with ❤️ for Beauty</p>
         </div>
     </footer>
-    <script src="js/style.js"></script>
-    <!-- Accordion Script -->
-    <script>
-        document.querySelectorAll('.accordion-header').forEach(header => {
+
+    <!-- <script src="js/script.js">document.querySelectorAll('.accordion-header').forEach(header => {
             header.addEventListener('click', () => {
                 const open = header.classList.contains('active');
                 document.querySelectorAll('.accordion-header').forEach(h => {
@@ -1398,9 +1468,8 @@
                     header.nextElementSibling.classList.add('open');
                 }
             });
-        });
-    </script>
-    
+        });</script> -->
+    <script src="js/style.js"></script>
 </body>
 
 </html>

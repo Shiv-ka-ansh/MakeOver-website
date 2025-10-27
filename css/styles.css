@@ -21,7 +21,6 @@ body {
 
 body.no-scroll {
   overflow: hidden;
-  /* For mobile menu fix */
 }
 
 /* Navigation */
@@ -43,7 +42,7 @@ body.no-scroll {
 }
 
 .navbar.hidden {
-  top: -100px; /* hides navbar when scrolling down */
+  top: -100px;
 }
 
 .nav-container {
@@ -51,10 +50,8 @@ body.no-scroll {
   margin: 0 auto;
   display: flex;
   justify-content: flex-start;
-  /* keep logo and site name together on the left */
   align-items: center;
   gap: 0.25rem;
-  /* tightened gap between logo image and logo text */
 }
 
 .logo {
@@ -65,7 +62,8 @@ body.no-scroll {
   /* slightly reduced to tighten the word spacing */
   text-transform: uppercase;
   margin-left: 0.1rem;
-  /* small nudge closer to the logo image */
+  display: flex;
+  align-items: center;
 }
 
 .logo a {
@@ -88,7 +86,6 @@ body.no-scroll {
   height: 48px;
   width: auto;
   max-width: 120px;
-  /* reduce maximum width so logo and text sit closer */
   display: block;
   margin-right: 0.15rem;
 }
@@ -96,11 +93,9 @@ body.no-scroll {
 .nav-menu {
   display: flex;
   gap: 1.6rem;
-  /* slightly tighter spacing between menu items */
   list-style: none;
   align-items: center;
   margin-left: auto;
-  /* push menu to the right when nav-container uses flex-start */
 }
 
 .nav-menu a {
@@ -140,6 +135,10 @@ body.no-scroll {
   letter-spacing: 1px;
   transition: all 0.3s;
   font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
 }
 
 .book-now-btn:hover {
@@ -156,7 +155,6 @@ body.no-scroll {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  /* Removed static background */
 }
 
 /* NEW Carousel Styles */
@@ -167,7 +165,6 @@ body.no-scroll {
   width: 100%;
   height: 100%;
   z-index: 0;
-  /* Keeps it behind the content */
 }
 
 .carousel-slide {
@@ -180,7 +177,6 @@ body.no-scroll {
   background-position: center;
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
-  /* Smooth transition */
 }
 
 .carousel-slide::after {
@@ -190,7 +186,6 @@ body.no-scroll {
   left: 0;
   width: 100%;
   height: 100%;
-  /* Semi-transparent dark overlay for text readability */
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
 }
 
@@ -198,7 +193,6 @@ body.no-scroll {
   opacity: 1;
 }
 
-/* Remove the old animated blob */
 .hero::before {
   display: none;
 }
@@ -215,7 +209,6 @@ body.no-scroll {
   font-weight: 300;
   margin-bottom: 1.5rem;
   color: white;
-  /* Changed for contrast on image carousel */
   letter-spacing: 4px;
   animation: fadeInUp 1.2s ease;
 }
@@ -531,13 +524,11 @@ body.no-scroll {
   aspect-ratio: 3/4;
   cursor: pointer;
   background: var(--light-cream);
-  /* Added transition for the filter logic */
   transition: all 0.5s ease-in-out;
 }
 
 /* Portfolio Filter Logic Fix: Hide when filtered out */
 .portfolio-item[style*="display: none"] {
-  /* Ensure filtered-out items don't intercept pointer events and fade smoothly */
   pointer-events: none;
   opacity: 0;
   transform: scale(0.98);
@@ -872,8 +863,6 @@ body.no-scroll {
   overflow: hidden;
 }
 
-
-
 /* Footer */
 footer {
   background: #1a1a1a;
@@ -955,12 +944,10 @@ footer {
 /* Individual brand colors */
 .social-links a[href*="instagram.com"] svg {
   fill: #E1306C;
-  /* Instagram pink */
 }
 
 .social-links a[href*="facebook.com"] svg {
   fill: #1877F2;
-  /* Facebook blue */
 }
 
 .social-links a[href*="youtube.com"] svg,
@@ -968,19 +955,13 @@ footer {
   fill: #ff0000c6;
 }
 
-/* YouTube red */
-
 .social-links a[href*="wa.me"] svg {
   fill: #25D366;
-  /* WhatsApp green */
 }
 
-/* Optional hover effect — just a light lift */
 .social-links a:hover {
   transform: translateY(-3px);
 }
-
-
 
 .footer-bottom {
   text-align: center;
@@ -1023,6 +1004,8 @@ footer {
   gap: 5px;
   cursor: pointer;
   z-index: 1001;
+  order: 3;
+  margin-left: auto;
 }
 
 .mobile-menu-btn span {
@@ -1044,7 +1027,7 @@ footer {
   transform: rotate(-45deg) translate(7px, -7px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   .mobile-menu-btn {
     display: flex;
   }
@@ -1078,12 +1061,10 @@ footer {
     border-bottom: 1px solid rgba(201, 163, 98, 0.2);
   }
 
-  /* FIX 2: Navbar button flexibility */
   .nav-menu li a.book-now-btn {
     margin-top: 1.5rem;
     text-align: center;
     display: inline-block;
-    /* allows padding to work properly */
     padding: 0.7rem 1.8rem;
     border-bottom: none;
   }
