@@ -153,3 +153,175 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// --------------- BACKEND (contact form submit) ----------------------
+
+// Custom Alert System
+class CustomAlert {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        // Create container for alerts if it doesn't exist
+        this.container = document.getElementById('custom-alert-container');
+        if (!this.container) {
+            this.container = document.createElement('div');
+            this.container.id = 'custom-alert-container';
+            document.body.appendChild(this.container);
+        }
+    }
+
+    show(options) {
+        const { type = 'info', title, message, duration = 5000 } = options;
+        
+        // Create alert element
+        const alert = document.createElement('div');
+        alert.className = `custom-alert ${type}`;
+        
+        // Icon based on type
+        const icon = type === 'success' ? '✅' : 
+                    type === 'error' ? '❌' : 
+                    '📢';
+        
+        alert.innerHTML = `
+            <div class="custom-alert-icon">${icon}</div>
+            <div class="custom-alert-content">
+                ${title ? `<div class="custom-alert-title">${title}</div>` : ''}
+                <div class="custom-alert-message">${message}</div>
+            </div>
+            <button class="custom-alert-close">✕</button>
+        `;
+
+        // Add to container
+        this.container.appendChild(alert);
+
+        // Show animation
+        setTimeout(() => alert.classList.add('show'), 10);
+
+        // Setup close button
+        const closeBtn = alert.querySelector('.custom-alert-close');
+        closeBtn.addEventListener('click', () => this.close(alert));
+
+        // Auto close
+        if (duration) {
+            setTimeout(() => this.close(alert), duration);
+        }
+    }
+
+    close(alert) {
+        alert.classList.remove('show');
+        setTimeout(() => alert.remove(), 300);
+    }
+}
+
+// Initialize alert system
+const customAlert = new CustomAlert();
+
+// Function to handle form submission
+async function handleContactFormSubmit(e) {
+    e.preventDefault();
+    
+    const form = e.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    // Get form fields
+    const firstName = form.querySelector('#firstName').value;
+    const lastName = form.querySelector('#lastName').value;
+    const email = form.querySelector('#email').value;
+    const phone = form.querySelector('#phone').value;
+    const service = form.querySelector('#service').value;
+    const date = form.querySelector('#date').value;
+    const message = form.querySelector('#message').value;
+
+    // Basic client-side validation
+    if (!firstName.trim() || !lastName.trim() || !email.trim() || !phone.trim() || !service) {
+        customAlert.show({
+            type: 'error',
+            title: 'Validation Error',
+            message: 'Please fill in all required fields.',
+            duration: 6000
+        });
+        return;
+    }
+
+    // Prepare payload
+    const payload = {
+        firstName: firstName.trim(),
+        lastName: lastName.trim(),
+        email: email.trim(),
+        phone: phone.trim(),
+        service: service,
+        date: date || '',
+        message: message.trim()
+    };
+
+    // Disable submit button while sending
+    if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+    }
+
+    try {
+        // Show sending notification
+        customAlert.show({
+            type: 'info',
+            title: 'Sending',
+            message: 'Please wait while we process your request...',
+            duration: 2000
+        });
+
+        // Make the request
+        const res = await fetch('http://localhost:5000/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        });
+
+        const data = await res.json().catch(() => ({}));
+        
+        if (!res.ok) {
+            customAlert.show({
+                type: 'error',
+                title: 'Error',
+                message: data.error || 'Failed to send message. Please try again.',
+                duration: 6000
+            });
+        } else {
+            customAlert.show({
+                type: 'success',
+                title: 'Success!',
+                message: 'Your message has been sent successfully. We will contact you soon!',
+                duration: 6000
+            });
+            form.reset();
+        }
+    } catch (err) {
+        console.error('Contact submit error:', err);
+        customAlert.show({
+            type: 'error',
+            title: 'Network Error',
+            message: 'Unable to connect to the server. Please try again later.',
+            duration: 6000
+        });
+    } finally {
+        if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+        }
+    }
+}
+
+// Wait for DOM to be ready
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        // Remove any existing listeners
+        const newForm = contactForm.cloneNode(true);
+        contactForm.parentNode.replaceChild(newForm, contactForm);
+        
+        // Add our submit handler
+        newForm.addEventListener('submit', handleContactFormSubmit);
+    }
+});
+
+

@@ -1,0 +1,104 @@
+/* ⚜️ Alert Box – Matching Exact Home Page Theme */
+.custom-alert {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  max-width: 420px;
+  padding: 16px 22px;
+  border-radius: 12px;
+  background: var(--light-cream);
+  color: var(--dark-text);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transform: translateX(120%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-left: 5px solid var(--primary-gold);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  z-index: 9999;
+}
+
+.custom-alert.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* 🎯 Alert Variants (still within your theme shades) */
+.custom-alert.success {
+  border-left-color: var(--primary-gold);
+  background: #fbf0dc;
+  color: #2e662e;
+}
+
+.custom-alert.error {
+  border-left-color: var(--dark-gold);
+  background: #edd2d2;
+  color: #7a2020;
+}
+
+.custom-alert.warning {
+  border-left-color: var(--primary-gold);
+  background: #fbf4e4;
+  color: #7b5b00;
+}
+
+.custom-alert.info {
+  border-left-color: var(--dark-gold);
+  background: #f1f4f6;
+  color: var(--dark-text);
+}
+
+/* 🧩 Elements */
+.custom-alert-icon {
+  font-size: 22px;
+  color: var(--primary-gold);
+}
+
+.custom-alert-content {
+  flex-grow: 1;
+}
+
+.custom-alert-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 15px;
+  color: var(--dark-text);
+}
+
+.custom-alert-message {
+  font-size: 13.5px;
+  color: var(--light-text);
+}
+
+.custom-alert-close {
+  background: transparent;
+  border: none;
+  color: var(--dark-text);
+  cursor: pointer;
+  padding: 4px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.custom-alert-close:hover {
+  opacity: 1;
+  color: var(--primary-gold);
+}
+
+/* ✨ Slide-in Animation */
+@keyframes slideInRight {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.custom-alert.show {
+  animation: slideInRight 0.3s ease forwards;
+}
