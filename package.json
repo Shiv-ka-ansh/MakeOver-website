@@ -1,0 +1,27 @@
+{
+  "name": "makeover-website",
+  "version": "1.0.0",
+  "description": "Simple, responsive marketing website for the \"MakeOver\" project. This repository contains the site source (HTML, CSS, JS, assets) and instructions to run and build locally.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shiv-ka-ansh/MakeOver-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shiv-ka-ansh/MakeOver-website/issues"
+  },
+  "homepage": "https://github.com/Shiv-ka-ansh/MakeOver-website#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "node": "^25.1.0",
+    "nodemailer": "^7.0.10"
+  }
+}
