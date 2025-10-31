@@ -145,7 +145,7 @@ footer {
     margin-top: 4rem;
 }
 
-@media (max-width: 868px) {
+@media (max-width: 768px) {
     .page-header h1 {
         font-size: 2.2rem;
     }
@@ -183,7 +183,7 @@ footer {
 }
 
 /* ====== Mobile Responsive Accordion & Tables ====== */
-@media (max-width: 868px) {
+@media (max-width: 768px) {
     .service-accordion {
         padding: 0 0.5rem;
     }
