@@ -6,7 +6,7 @@ const cors = require('cors');
 const nodemailer = require('nodemailer');
 
 app.use(cors( {
-    origin: [ " https://makeover-website-1.onrender.com", "http://localhost:5000" , "http://127.0.0.1:5500"] ,
+    origin: [ " https://makeover-website2.onrender.com","https://makeover-website.onrender.com","http://localhost:5000" , "http://127.0.0.1:5500"] ,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
 }));
