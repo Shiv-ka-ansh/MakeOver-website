@@ -129,7 +129,11 @@ app.use(cors({
     "https://makeover-website2.onrender.com",
     "https://makeover-website.onrender.com",
     "http://localhost:5000",
-    "http://127.0.0.1:5500"
+    "http://127.0.0.1:5500",
+    "https://makeoverbyreet.com/",
+    "www.makeoverbyreet.com",
+    "http://makeoverbyreet.com"
+    
   ],
   methods: ["GET", "POST", "OPTIONS"],
   credentials: true,
